@@ -1,0 +1,428 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+.background {
+    /* background-image: url('chitti.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.uni{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;
+}
+.logo{
+    width: 40px; 
+    height: 40px; 
+    background-image: url('logo2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+    filter: brightness(01);
+    animation: rotateLogo 3s linear infinite; 
+    border-radius: 50%;
+}
+
+.bottom{
+    position: relative;
+    bottom: -306px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: whitesmoke;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typewriter {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    color: whitesmoke;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;     
+}
+.chat i{
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.chat{
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    font-weight: 600;
+    padding: 15px; 
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    position: relative; 
+    width: 80%; 
+    max-width: 45rem;
+    margin: 0 auto; 
+}
+
+
+.search input {
+    width: 100%;
+    height: 3rem;
+    padding: 10px;
+    padding-left: 50px;
+    font-size: 1rem;
+    margin-top: 35px; 
+    border: 2px solid #333;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: black !important;
+}
+
+.icons {
+    position: relative;
+    left: 36px;
+    top: 110%; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.icons .icon-hidden {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    opacity: 0;
+    transform: scale(0.8); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* color: black;
+    background-color: white; */
+    background-color: var(--logo-background); 
+    color: var(--logo-color); 
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.icon-visible {
+    color: black; 
+    cursor: pointer;
+}
+
+.icon-visible::before {
+    color: black !important;
+}
+
+
+.search input + i {
+    position: relative;
+    right: 40px; 
+    top: -75%; 
+    transform: translateY(133%);
+    font-size: 1.4rem;
+    color: black;
+}
+
+.icon-hidden:nth-child(2) {
+    left: -75px; 
+    top: -8%; 
+}
+
+.icon-hidden:nth-child(3) {
+    left: -40px; 
+    top: -60px; 
+}
+
+.icon-hidden:nth-child(4) {
+    left: -40px; 
+    bottom: 5px; 
+}
+
+.show-icons .icon-hidden {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: 750px) {
+    .search {
+        width: 90%; 
+    }
+    .typewriter {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Theme toggle */
+/* :root {
+    --background-color: white;
+    --text-color: black;
+    --logo-background: black;
+    --logo-color: white;
+    --log-color: black;
+    --logo-dark: url('logo1.jpg');
+    --logo-light: url('logo2.jpg');
+}
+
+body.light-theme {
+    --background-color: white;
+    --text-color: black;
+    --logo-background: black; 
+    --logo-color: white;
+    --log-color: black;
+}
+
+body.dark-theme {
+    --background-color: black;
+    --text-color: white;
+    --logo-background: white; 
+    --logo-color: black; 
+    --log-color: white;
+}
+
+body.light-theme .logo {
+    background-image: var(--logo-light);
+}
+
+body.dark-theme .logo {
+    background-image: var(--logo-dark);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.chat, .typewriter, .bottom, .search input, .search i, .try-chatgpt, form label {
+    color: var(--text-color);
+} */
+
+
+:root {
+    --background-color: white;
+    --text-color: black;
+    --logo-background: black;
+    --logo-color: white;
+    --log-color: black;
+}
+
+body.light-theme {
+    --background-color: white;
+    --text-color: black;
+    --logo-background: black; 
+    --logo-color: white;
+    --log-color: black;
+}
+
+body.dark-theme {
+    --background-color: black;
+    --text-color: white;
+    --logo-background: white; 
+    --logo-color: black; 
+    --log-color: white;
+}
+
+body.light-theme .logo {
+    background-image: url('logo2.jpg') !important; 
+}
+
+body.dark-theme .logo {
+    background-image: url('logo1.jpg');
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.chat, .typewriter, .bottom, .search input, .search i, .try-chatgpt, form label {
+    color: var(--text-color);
+}
+
+
+
+
+.container {
+    position: absolute;
+    font-size: 1.2rem; 
+    top: 0; 
+    right: 30px; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px 25px 0px 0px;
+    width: 100%;
+    color: var(--log-color); 
+}
+
+
+.mode-toggle {
+    position: relative; 
+    display: inline-block;
+}
+
+#mode-button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 600; 
+}
+
+
+.mode-options {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 500; 
+    font-family: 'Inter', sans-serif;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    z-index: 1;
+    width: 120px;
+    top: 100%; 
+    right: -34px; 
+}
+
+.mode-options .mode-option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.mode-options .mode-option:hover {
+    background-color: gainsboro;
+    border-radius: 15px;
+}
+
+
+.mode-toggle.active .mode-options {
+    display: block;
+}
+
+
+body.dark-theme #mode-button {
+    color: #fff;
+}
+
+body.dark-theme .mode-options {
+    background-color: black;
+}
+
+body.dark-theme .mode-options .mode-option {
+    color: #fff;
+}
+
+
+
+/* Style for the text that opens the form */
+.try-chatgpt {
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    /* color: #007bff; */
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.try-chatgpt:hover {
+    text-decoration: none;
+}
+
+/* Form container styling */
+.form-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 0.5px solid black;
+    background-color: whitesmoke;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: whitesmoke;
+}
+
+form label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+    text-align: start;
+    font-family: 'Inter', sans-serif;
+}
+.format{
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Inter', sans-serif; 
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+form button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif; 
+}
+
+form button:hover {
+    background-color: rgb(34, 34, 34);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="chat">
+            <div class="text">ChatGPT</div>
+            <i class="fa-solid fa-angle-down"></i>                     
+        </div>
+        <div class="container">
+            <div class="new">
+                <div class="mode-toggle">
+                    <span id="mode-button">Mode</span>
+                    <div id="mode-options" class="mode-options">
+                        <div class="mode-option" data-theme="light">Reading</div>
+                        <div class="mode-option" data-theme="dark">Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+              
+        <div class="uni">
+            <div class="typewriter">
+                <span id="text"></span>
+                <div class="logo">
+                
+                </div>
+            </div> 
+        </div>   
+        <div class="search">
+            <div class="icons">
+                <i class="fa-solid fa-paperclip icon-visible"></i>
+                <i class="fa-solid fa-pen-to-square icon-hidden"></i>              
+                <i class="fa-solid fa-bars-staggered icon-hidden"></i>
+                <i class="fa-solid fa-user icon-hidden"></i>
+            </div>
+            <input type="text" placeholder="Message ChatGPT" id="search-bar">
+            <i class="fa-solid fa-circle-arrow-up"></i>
+        </div>
+        <div class="try-chatgpt" id="try-chatgpt">
+            Try ChatGPT Innovative AI.
+        </div>
+
+        <!-- Form Section (Initially Hidden) -->
+        <div class="form-container" id="form-container" style="display: none;">
+            <form id="user-questions-form">
+                <div class="format">
+                    Help AI Optimise Your Search
+                </div>
+                <label for="q1">What type of tone or style do you prefer for the response (formal, casual, technical, creative)?</label>
+                <input type="text" id="q1" name="q1" required>
+                <label for="q2"> Is there any background information or context I should know before responding?</label>
+                <input type="text" id="q2" name="q2" required>
+                <label for="q3">Are there any examples or references you'd like me to consider while generating the response?</label>
+                <input type="text" id="q3" name="q3" required>
+                <label for="q4">Would you prefer a step-by-step explanation, summary, or direct answer?</label>
+                <input type="text" id="q4" name="q4" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="bottom">
+            ChatGPT can make mistakes. Check important info.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
